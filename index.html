@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clínica de Beleza Thaís Vieira — Cursos & Serviços</title>
+  <meta name="description" content="Belle Vie Estética — cursos profissionais, serviços e capacitação em estética e cosmetologia." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <div class="maxw header-inner">
+      <div class="brand" aria-hidden="false">
+
+        <svg class="logo" viewBox="0 0 80 80" width="48" height="48" aria-hidden="true" focusable="false">
+          <rect width="80" height="80" rx="14" fill="#fff0f4"/>
+          <text x="50%" y="56%" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#d74f7a">TV</text>
+        </svg>
+        <div>
+          <h1 class="company">Clínica de Beleza Thaís Vieira</h1>
+          <p class="tagline">Beleza profissional. Carreira transformadora.</p>
+        </div>
+      </div>
+
+      <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+        <button id="menu-toggle" aria-expanded="false" aria-controls="menu-list" aria-label="Abrir menu">☰</button>
+        <ul id="menu-list" class="menu-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="maxw hero-inner">
+        <div class="hero-copy">
+          <h2>Capacite-se. Atenda profissionalmente. Cresça sua agenda.</h2>
+          <p class="lead">Cursos práticos, conteúdo atualizado e suporte para empreender no mercado da estética.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#cursos">Ver Cursos</a>
+            <a class="btn ghost" href="#contato">Falar com a equipe</a>
+          </div>
+        </div>
+        <figure class="hero-media" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1200&q=60&auto=format&fit=crop" alt="" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- CURSOS -->
+    <section id="cursos" class="section">
+      <div class="maxw section-head">
+        <h3>Nossos Cursos</h3>
+        <p class="muted">Formatos presencial, híbrido e online — certificados válidos e foco em prática.</p>
+      </div>
+
+      <div class="maxw grid-controls">
+        <label for="type-filter" class="visually-hidden">Filtrar cursos</label>
+        <select id="type-filter" aria-label="Filtrar cursos">
+          <option value="all">Todos os cursos</option>
+          <option value="facial">Estética Facial</option>
+          <option value="corporal">Estética Corporal</option>
+          <option value="unhas">Unhas</option>
+          <option value="negocios">Negócios</option>
+        </select>
+        <input id="search" type="search" placeholder="Pesquisar cursos" aria-label="Pesquisar cursos" />
+      </div>
+
+      <div class="maxw cards-grid" id="cards-grid" role="list">
+        <!-- COURSE CARD (copy structure as needed) -->
+        <article class="card" role="listitem" data-category="facial" tabindex="0" aria-label="Limpeza Facial Profunda — R$ 420,00" data-title="Limpeza Facial Profunda" data-price="R$ 420,00" data-img="https://images.unsplash.com/photo-1580518318232-6c1f9b2f4b5a?w=800&q=60&auto=format&fit=crop">
+          <div class="card-media" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1580518318232-6c1f9b2f4b5a?w=800&q=60&auto=format&fit=crop" alt="" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Limpeza Facial Profunda</h4>
+            <p class="card-desc">Protocolos avançados com prática em modelos — passo a passo seguro e atual.</p>
+            <div class="card-footer">
+              <span class="price" aria-hidden="false">R$ 420,00</span>
+              <button class="btn outline enroll" aria-label="Inscrever no curso Limpeza Facial Profunda">Inscrever</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" data-category="corporal" tabindex="0" aria-label="Massoterapia & Modeladora — R$ 500,00" data-title="Massoterapia & Modeladora" data-price="R$ 500,00" data-img="https://images.unsplash.com/photo-1512446810474-6f7b4b97d6e4?w=800&q=60&auto=format&fit=crop">
+          <div class="card-media" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1512446810474-6f7b4b97d6e4?w=800&q=60&auto=format&fit=crop" alt="" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Massoterapia & Modeladora</h4>
+            <p class="card-desc">Técnicas manuais e mecânicas para modelar e reduzir medidas com segurança.</p>
+            <div class="card-footer">
+              <span class="price">R$ 500,00</span>
+              <button class="btn outline enroll" aria-label="Inscrever no curso Massoterapia & Modeladora">Inscrever</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" data-category="unhas" tabindex="0" aria-label="Design de Unhas e Nail Art — R$ 350,00" data-title="Design de Unhas e Nail Art" data-price="R$ 350,00" data-img="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=60&auto=format&fit=crop">
+          <div class="card-media" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=60&auto=format&fit=crop" alt="" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Design de Unhas e Nail Art</h4>
+            <p class="card-desc">Alongamento, gel, acrílico e nail art do básico ao avançado.</p>
+            <div class="card-footer">
+              <span class="price">R$ 350,00</span>
+              <button class="btn outline enroll" aria-label="Inscrever no curso Design de Unhas e Nail Art">Inscrever</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" role="listitem" data-category="negocios" tabindex="0" aria-label="Gestão, Marketing e Vendas — R$ 390,00" data-title="Gestão, Marketing e Vendas" data-price="R$ 390,00" data-img="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=60&auto=format&fit=crop">
+          <div class="card-media" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=60&auto=format&fit=crop" alt="" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Gestão, Marketing e Vendas</h4>
+            <p class="card-desc">Aprenda a gerir agenda, precificar e atrair clientes com estratégias práticas.</p>
+            <div class="card-footer">
+              <span class="price">R$ 390,00</span>
+              <button class="btn outline enroll" aria-label="Inscrever no curso Gestão, Marketing e Vendas">Inscrever</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="servicos" class="section">
+      <div class="maxw">
+        <h3>Serviços em Destaque</h3>
+        <ul class="services-grid">
+          <li>Peeling Químico</li>
+          <li>Microagulhamento</li>
+          <li>Depilação a laser</li>
+          <li>Pacotes para Noivas</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="section">
+      <div class="maxw">
+        <h3>Depoimentos</h3>
+        <blockquote class="quote">“Melhorei meu atendimento e minha renda após o curso — recomendo!” <cite>— Patrícia</cite></blockquote>
+      </div>
+    </section>
+
+    <section id="contato" class="section form-section">
+      <div class="maxw contact-grid">
+        <form id="contact-form" aria-label="Formulário de contato">
+          <h3>Fale Conosco</h3>
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" required />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Enviar</button>
+          </div>
+        </form>
+
+        <aside class="contact-info" aria-label="Informações de contato">
+          <h4>Visite-nos</h4>
+          <address>
+            Rua das Rosas, 123<br/>
+            Centro — Cidade/UF
+          </address>
+          <p>📞 (44) 99999-9999</p>
+          <p>✉ <a href="mailto:contato@Clínica de Beleza Thaís Vieira.com.br">contato@Clínica de Beleza Thaís Vieira.com.br</a></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="maxw footer-inner">
+      <p>© <span id="year"></span> Clínica de Beleza Thaís Vieira • Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <div id="preview" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="preview-title">
+    <div class="modal-panel" role="document">
+      <button id="close-preview" class="modal-close" aria-label="Fechar">✕</button>
+      <div class="preview-media">
+        <img id="preview-img" src="" alt="" />
+      </div>
+      <div class="preview-body">
+        <h3 id="preview-title"></h3>
+        <p id="preview-desc" class="muted"></p>
+        <p id="preview-price" class="preview-price" aria-live="polite"></p>
+        <div class="modal-actions">
+          <button id="enroll-now" class="btn primary">Inscrever-se</button>
+          <button id="close-2" class="btn ghost">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
