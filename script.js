@@ -1,9 +1,5 @@
-/* script.js — interactions, accessibility & animations */
-
-// Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Simple reveal on scroll for .section elements
 (function revealOnScroll(){
   const revealElems = document.querySelectorAll('.section, .hero');
   const observer = new IntersectionObserver((entries)=>{
@@ -17,7 +13,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
   revealElems.forEach(el => observer.observe(el));
 })();
 
-/* MENU TOGGLE (mobile) */
 const menuToggle = document.getElementById('menu-toggle');
 const menuList = document.getElementById('menu-list');
 if(menuToggle){
@@ -28,7 +23,6 @@ if(menuToggle){
   });
 }
 
-/* FILTER & SEARCH */
 const filter = document.getElementById('type-filter');
 const search = document.getElementById('search');
 const cardsGrid = document.getElementById('cards-grid');
@@ -48,7 +42,6 @@ function applyFilter(){
 if(filter) filter.addEventListener('change', applyFilter);
 if(search) search.addEventListener('input', applyFilter);
 
-/* CARD INTERACTIONS: open PREVIEW modal on click or Enter/Space */
 const modal = document.getElementById('preview');
 const modalImg = document.getElementById('preview-img');
 const modalTitle = document.getElementById('preview-title');
@@ -70,28 +63,20 @@ function openPreview(card){
   modalPrice.textContent = price;
   modal.setAttribute('aria-hidden','false');
 
-  // trap focus to modal
   const focusable = modal.querySelectorAll('button, [href], input, textarea, select');
   if(focusable.length) focusable[0].focus();
 }
 
 function closeModal(){
   modal.setAttribute('aria-hidden','true');
-  // clear preview image to release memory for some browsers
-  // keep src if you want caching
-  // modalImg.src = '';
 }
 
-// attach events to cards and enroll buttons
 cardsGrid.querySelectorAll('.card').forEach(card => {
-  // click
   card.addEventListener('click', (e)=>{
-    // avoid opening when clicking buttons inside card
     if(e.target.closest('button')) return;
     openPreview(card);
   });
 
-  // keyboard accessibility (Enter & Space)
   card.addEventListener('keydown', (e)=>{
     if(e.key === 'Enter' || e.key === ' '){
       e.preventDefault();
@@ -99,7 +84,6 @@ cardsGrid.querySelectorAll('.card').forEach(card => {
     }
   });
 
-  // enroll button inside card
   const enrollBtn = card.querySelector('.enroll');
   if(enrollBtn){
     enrollBtn.addEventListener('click', (ev)=>{
@@ -109,33 +93,33 @@ cardsGrid.querySelectorAll('.card').forEach(card => {
   }
 });
 
-// modal close
 closePreview.addEventListener('click', closeModal);
 document.getElementById('close-2').addEventListener('click', closeModal);
 
-// close on ESC
 document.addEventListener('keydown', (e)=>{
   if(e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false'){
     closeModal();
   }
 });
 
-// Enroll action
 enrollNow.addEventListener('click',()=>{
-  // Here you could open a real sign-up form; for demo we show alert
   alert('Obrigado! Sua solicitação de inscrição foi recebida. Em breve entraremos em contato.');
   closeModal();
 });
 
-/* Simple form submission for contact */
 const contactForm = document.getElementById('contact-form');
 if(contactForm){
   contactForm.addEventListener('submit', (e)=>{
     e.preventDefault();
-    // here you'd normally send to server; we'll simulate
+
     const name = document.getElementById('nome').value || '';
     alert(`Obrigado ${name.trim() || ''}! Recebemos sua mensagem e responderemos por e-mail.`);
     contactForm.reset();
   });
 }
 
+document.querySelectorAll('.services-grid .btn.primary').forEach(button => {
+  button.addEventListener('click', () => {
+    alert("agendamento enviado para ✉ E-mail:contato@Clínica de Beleza Thaís Vieira.com.br");
+  });
+});
